@@ -1,6 +1,6 @@
 const InputField = ({ value, label, name, placeholder, type, onChange }: any) => (
-  <>
-    {label ? <label htmlFor="input-field">{label}</label> : <> </>}
+  <div className="flex flex-col">
+    {label ? <label htmlFor={name} className="my-label">{label}</label> : <> </>}
     <input
       type={type}
       value={value}
@@ -8,8 +8,9 @@ const InputField = ({ value, label, name, placeholder, type, onChange }: any) =>
       placeholder={placeholder}
       onChange={onChange}
       required
+      className="my-input"
     />
-  </>
+  </div>
 );
 
 export default InputField;

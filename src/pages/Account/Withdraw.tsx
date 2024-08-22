@@ -10,7 +10,7 @@ import InputField from "../../components/Input";
 const Withdraw = () => {
   const navigate = useNavigate();
 
-  const [balance, setBalance] = useState<number | null>(null);
+  const [balance, setBalance] = useState<number | null>(0);
 
   const [httpStatus, setHttpStatus] = useState("");
 
@@ -31,25 +31,52 @@ const Withdraw = () => {
   };
 
   return (
-    <>
+    <div className="min-h-fit my-page">
       <p>{httpStatus}</p>
-      <ol>
-        <ul>
-          <a href="/account/dashboard">Voltar</a>
-        </ul>
-      </ol>
-      <form method="POST" onSubmit={handle}>
-        <label htmlFor="namber">Valor: </label>
+      <form method="POST" onSubmit={handle} className="flex flex-col space-y-5">
+        <div className="flex items-center space-x-1">
+          <span className="text-primary">/</span>
+          <a href="/" className="my-link">
+            Home
+          </a>
+          <span className="text-primary">/</span>
+          <a href="/account" className="my-link">
+            Account
+          </a>
+          <span className="text-primary">/</span>
+          <a href="/account/Dashboard" className="my-link">
+            Dashboard
+          </a>
+          <span className="text-primary">/</span>
+          <a href="/account/withdraw" className="my-link">
+            Sacar
+          </a>
+        </div>
+
         <InputField
+          label="Valor"
           type="number"
           name="balance"
           value={balance as number}
           onChange={(e: any) => setBalance(e.target.value as unknown as number)}
           required
         />
-        <button type="submit">Enviar</button>
+
+        <div className="flex space-x-1">
+          <button type="submit" className="my-button">
+            Sacar
+          </button>
+          <button
+            onClick={() => {
+              setBalance(0);
+            }}
+            className="my-button"
+          >
+            Limpar
+          </button>
+        </div>
       </form>
-    </>
+    </div>
   );
 };
 

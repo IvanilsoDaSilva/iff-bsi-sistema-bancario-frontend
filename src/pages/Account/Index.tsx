@@ -36,45 +36,50 @@ const Index = () => {
   };
 
   return (
-    <>
+    <div className="min-h-fit my-page">
       <p>{httpStatus}</p>
-      <ol>
-        <ul>
-          <a href="/">Voltar</a>
-        </ul>
-        <ul>
-          <a href="/account/individual-person/create">
-            Criar uma conta pessoal
-          </a>
-        </ul>
-        <ul>
-          <a href="/account/legal-person/create">
-            Criar uma conta de empresarial
-          </a>
-        </ul>
-      </ol>
-      <form method="POST" onSubmit={handle}>
-        <label htmlFor="number">Numero da conta: </label>
-        <InputField
-          type="text"
-          name="number"
-          value={number as string}
-          onChange={(e: any) => setNumber(e.target.value)}
-          required
-        />
+      <form method="POST" onSubmit={handle} className="flex flex-col space-y-5">
+        <div className="flex items-center space-x-1">
+          <span className="text-primary">/</span>
+          <a href="/" className="my-link">Home </a>
+          <span className="text-primary">/</span>
+          <a href="/account" className="my-link">Account </a>
+        </div>
 
-        <label htmlFor="password">Senha: </label>
-        <InputField
-          type="password"
-          name="password"
-          value={password as string}
-          onChange={(e: any) => setPassword(e.target.value)}
-          required
-        />
+        <div className="animate-left-right-100">
+          <InputField
+            label="Numero da conta"
+            type="text"
+            name="number"
+            value={number as string}
+            onChange={(e: any) => setNumber(e.target.value)}
+            required
+          />
+        </div>
+        
+        <div className="animate-left-right-200">
+          <InputField
+            label="Senha"
+            type="password"
+            name="password"
+            value={password as string}
+            onChange={(e: any) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        
+        
+        <div className="flex space-x-1">
+          <button type="submit" className="my-button">Enviar</button>
+          <button onClick={() =>{setNumber(""); setPassword("")}} className="my-button">Limpar</button>
+        </div>
 
-        <button type="submit">Enviar</button>
+        <div className="flex space-x-1">
+          <a href="/account/individual-person/create" className="my-link">Crie uma conta pessoal</a>
+          <a href="/account/legal-person/create" className="my-link">Crie uma conta empresarial</a>
+        </div>
       </form>
-    </>
+    </div>
   );
 };
 

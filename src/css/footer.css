@@ -1,0 +1,20 @@
+.my-footer-info-content {
+  @apply flex items-center lg:justify-start justify-center;
+}
+
+.my-footer-nav-button {
+  @apply flex w-full lg:w-auto justify-center lg:hover:underline text-sm font-bold;
+  @apply bg-primary hover:bg-primary/50 lg:bg-transparent hover:lg:bg-transparent text-secondary lg:text-primary hover:lg:text-primary/50;
+}
+
+.my-footer-social-button {
+  @apply bg-primary text-white py-2 px-2 rounded hover:bg-primary/50 focus:animate-fall hover:animate-rotate-z;
+}
+
+.my-footer-nav-content {
+  @apply lg:flex lg:justify-end justify-items-center grid grid-cols-1 gap-2 my-2;
+}
+
+.my-footer-social-content {
+  @apply flex space-x-3 justify-center lg:justify-end;
+}

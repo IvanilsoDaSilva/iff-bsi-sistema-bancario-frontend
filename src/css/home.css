@@ -1,0 +1,7 @@
+.my-home-select-button {
+  @apply bg-center hover:animate-scale hover:shadow-black shadow-transparent shadow-xl h-full w-full;
+}
+
+.my-home-select-button-title {
+  @apply bg-primary/50 text-secondary text-center font-bold;
+}

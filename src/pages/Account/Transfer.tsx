@@ -5,12 +5,11 @@ import { IPersonAccount } from "../../interfaces/PersonAccount";
 import { TransferAccount } from "../../api/SistemaBancarioBackend";
 import InputField from "../../components/Input";
 
-
 const Transfer = () => {
   const navigate = useNavigate();
 
   const [balance, setBalance] = useState<number | null>(null);
-  const [account, setAccount] = useState<String | null>(null);
+  const [account, setAccount] = useState<string | null>(null);
 
   const [httpStatus, setHttpStatus] = useState("");
   const [cookies] = useCookies(["user"]);
@@ -21,7 +20,7 @@ const Transfer = () => {
     const response = await TransferAccount({
       id: cookies.user.id,
       target: account,
-      balance: balance
+      balance: balance,
     } as IPersonAccount);
     setHttpStatus(response.status.toString());
 
@@ -30,26 +29,39 @@ const Transfer = () => {
     }
   };
   return (
-    <>
+    <div className="min-h-fit my-page">
       <p>{httpStatus}</p>
-      <ol>
-        <ul>
-          <a href="/account/dashboard">Voltar</a>
-        </ul>
-      </ol>
-      <form method="POST" onSubmit={handle}>
+      <form method="POST" onSubmit={handle} className="flex flex-col space-y-5">
+        <div className="flex items-center space-x-1">
+          <span className="text-primary">/</span>
+          <a href="/" className="my-link">
+            Home
+          </a>
+          <span className="text-primary">/</span>
+          <a href="/account" className="my-link">
+            Account
+          </a>
+          <span className="text-primary">/</span>
+          <a href="/account/Dashboard" className="my-link">
+            Dashboard
+          </a>
+          <span className="text-primary">/</span>
+          <a href="/account/transfer" className="my-link">
+            Transferir
+          </a>
+        </div>
 
-        <label htmlFor="account">Conta: </label>
         <InputField
-          type="string"
+          label="Numero da conta"
+          type="text"
           name="account"
-          value={account as String}
-          onChange={(e: any) => setAccount(e.target.value as String)}
+          value={account as string}
+          onChange={(e: any) => setAccount(e.target.value as string)}
           required
         />
 
-        <label htmlFor="balance">Valor: </label>
         <InputField
+          label="Valor"
           type="number"
           name="balance"
           value={balance as number}
@@ -57,9 +69,21 @@ const Transfer = () => {
           required
         />
 
-        <button type="submit">Enviar</button>
+        <div className="flex space-x-1">
+          <button type="submit" className="my-button">
+            Transferir
+          </button>
+          <button
+            onClick={() => {
+              setBalance(0);
+            }}
+            className="my-button"
+          >
+            Limpar
+          </button>
+        </div>
       </form>
-    </>
+    </div>
   );
 };
 

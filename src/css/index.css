@@ -1,162 +1,52 @@
- :root {
-   font-family: Manrope, system-ui, Avenir, Helvetica, Arial, sans-serif;
-   line-height: 1.5;
-   font-weight: 400;
-   box-sizing: border-box;
-   padding: 0px;
-   margin: 0px;
+@import url("./reset.css");
+@import url("./footer.css");
+@import url("./home.css");
 
-   color-scheme: light dark;
-   color: rgba(255, 255, 255, 0.87);
-   background-color: #09090B;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-   font-synthesis: none;
-   text-rendering: optimizeLegibility;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
- }
+/* My classes*/
+.my-section {
+  @apply 2xl:px-96 lg:px-52 px-12 py-10;
 
- ::placeholder {
-  font-size: 12px;
-  font-weight: 600;
-  font-family: Manrope, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+  @apply min-w-[400px];
 }
 
- body {
-   margin: 0;
-   display: flex;
-   place-items: center;
-   align-items: center;
-   justify-content: center;
-   min-width: 320px;
-   min-height: 100vh;
- }
-
- ol {
-   margin: 0px 0px 20px 0px;
-   padding: 0px;
-
-   ul {
-     margin: 0;
-     padding: 0px;
-   }
- }
-
- form {
-   display: grid;
-   font-size: 20px;
-   margin: 0 0 2vh 0;
-
-   input {
-     outline: unset;
-     border: none;
-     height: 30px;
-     width: 426px;
-     border-radius: 5px;
-     padding: 8px;
-     transition: .1s;
-     border: 1px solid rgb(48, 45, 45);
-   }
-
-   label {
-     height: 24px;
-     width: 231px;
-     font-size: 16px;
-     line-height: 24px;
-     margin: 10px 0px 2px 0px;
-   }
-
-   :focus {
-     border: 1px #646cff solid;
-     outline: none;
-   }
-
-   :focus::placeholder {
-     color: #646cff;
-   }
- }
-
- a {
-   font-weight: 500;
-   color: #ffffff;
-   text-decoration: inherit;
- }
-
- a:hover {
-   color: #535bf2;
- }
-
- h1 {
-   font-size: 3.2em;
-   line-height: 1.1;
- }
-
- button {
-   margin-top: 20px;
-   color: #fafafa;
-   border-radius: 8px;
-   border: 1px solid transparent;
-   padding: 0.6em 1.2em;
-   font-size: 1em;
-   font-weight: 500;
-   font-family: inherit;
-   background-color: #27272A;
-   cursor: pointer;
-   transition: border-color 0.25s;
-
- }
-
- .logout {
-   margin-left: 5px;
- }
-
- button:hover {
-   border-color: #646cff;
- }
-
- button:focus,
- button:focus-visible {
-   outline: 4px auto -webkit-focus-ring-color;
- }
-
- select {
-   outline: none;
-   border: none;
-   height: 39px;
-   border-radius: 4px;
-   cursor: pointer;
-   padding: 0px 0px 0px 5px;
-
-   option {
-     position: relative;
-     height: 4rem;
-     padding: 1rem;
-     font-size: 14px;
-     display: flex;
-     align-items: center;
-     cursor: pointer;
-     transition: background-color .3s;
-     opacity: 1;
-   }
- }
-
- table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+.my-page {
+  @apply flex-grow my-section;
 }
 
-table td, table th {
-  padding: 8px;
+.my-label {
+  @apply text-sm text-primary;
 }
 
-table tr:nth-child(even){background-color: #111111;}
+.my-input {
+  @apply border-primary border-solid border-2 rounded ring-primary h-full;
+}
 
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4b50b1;
-  color: white;
+.my-button {
+  @apply bg-primary hover:bg-primary/50 rounded text-secondary px-3 py-1 focus:animate-scale;
+}
+
+.my-link {
+  @apply hover:underline text-sm text-primary hover:text-primary/50;
+}
+
+/* Tags */
+a {
+  @apply hover:cursor-pointer;
+}
+
+body {
+  @apply h-screen;
+}
+
+body > div#root {
+  @apply flex flex-col h-screen;
+}
+
+/* Actions */
+::selection {
+  @apply bg-primary text-secondary;
 }
