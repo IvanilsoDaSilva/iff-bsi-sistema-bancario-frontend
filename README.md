@@ -9,7 +9,7 @@
 
 <!-- Animated text -->
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?color=FF00FF&size=35&center=true&width=290&lines=SISTEMA;BANCÁRIO;FRONTEND"/>
+  <img src="https://readme-typing-svg.herokuapp.com/?color=FF00FF&size=35&center=true&width=290&lines=IFF;BSI;SISTEMA;BANCÁRIO;FRONTEND"/>
 </div>
 
 <h2 align="right">1.1. INTRODUCTION 📰</h2>
@@ -18,7 +18,7 @@ Bem-vindo ao repositório sistema-bancario-frontend, um projeto desenvolvido dur
 
 <h2 align="right">1.2. DESCRIPTION 📝</h2>
 
-Este repositório mantém o frontend do sistema que funciona junto a um [backend](https://github.com/IvanilsoDaSilva/sistema-bancario-backend) separado. Essa parte se trata do frontend e foi utilizada pela materia de Interação Humano-Máquina com meu grupo @[Caike](https://github.com/CaikeLobo).
+Este repositório mantém o frontend do sistema que funciona junto a um [backend](https://github.com/IvanilsoDaSilva/iff-bsi-sistema-bancario-backend) separado. Essa parte se trata do frontend e foi utilizada pela materia de Interação Humano-Máquina com meu grupo @[Caike](https://github.com/CaikeLobo).
 
 <h2 align="right">1.3. TECHNOLOGIES 💻</h2>
 
@@ -56,7 +56,7 @@ Este repositório mantém o frontend do sistema que funciona junto a um [backend
 ```
 npm install
 ```
-📌 RUN THE SYSTEM BACKEND IN [sistema-bancario-backend](https://github.com/IvanilsoDaSilva/sistema-bancario-backend)  
+📌 RUN THE SYSTEM BACKEND IN [sistema-bancario-backend](https://github.com/IvanilsoDaSilva/iff-bsi-sistema-bancario-backend)  
 📌 CONFIGURE THE ".env" FILE 
 ```
 VITE_API_BASE_URL = {YOUR API URL}
@@ -70,7 +70,7 @@ npm run dev
 
 <div>
   <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=IvanilsoDaSilva&repo=udemy-introducao-python&bg_color=FF00FF&title_color=FFFFFF&text_color=FFFFFF&icon_color=FFFFFF"/>
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=IvanilsoDaSilva&repo=sistema-bancario-backend&bg_color=FFFFFF&title_color=FF00FF&text_color=FF00FF&icon_color=FF00FF&border_color=FF00FF"/>
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=IvanilsoDaSilva&repo=iff-bsi-sistema-bancario-backend&bg_color=FFFFFF&title_color=FF00FF&text_color=FF00FF&icon_color=FF00FF&border_color=FF00FF"/>
   <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=IvanilsoDaSilva&repo=iff-bsi&bg_color=FFFFFF&title_color=FF00FF&text_color=FF00FF&icon_color=FF00FF&border_color=FF00FF"/>
   <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=IvanilsoDaSilva&repo=git-commands&bg_color=FF00FF&title_color=FFFFFF&text_color=FFFFFF&icon_color=FFFFFF&border_color=FFFFFF"/>
 </div>
